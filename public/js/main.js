@@ -8,6 +8,15 @@ const perfectSquares = [
 
 perfectSquares.reverse()
 
+document.body.onkeyup = function(e) {
+  if (e.key == " " ||
+      e.code == "Space" ||      
+      e.keyCode == 32      
+  ) {
+    go();
+  }
+}
+
 function findCommonAndSort(list1, list2, list3) {
   // Phind ai code haha
   let common = [];
@@ -50,7 +59,8 @@ function factor(number) {
 
 function go() {
   alert('GOING')
-  const input = document.getElementById('input').value;
+  const inputElement = document.getElementById('input');
+  const input = inputElement.value
   const results = document.getElementById('results');
   const splitInput = input.split(' ');
   
@@ -61,6 +71,7 @@ function go() {
   const response = solve(a, b, c);
   alert(response)
   results.innerHTML = response;
+  inputElement.select()
 }
 
 function solve(a, b, c) {
