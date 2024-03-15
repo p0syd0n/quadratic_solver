@@ -8,15 +8,13 @@ const perfectSquares = [
 
 perfectSquares.reverse()
 
-document.body.onkeyup = function(e) {
-  if (e.key == " " ||
-      e.code == "Space" ||      
-      e.keyCode == 32      
-  ) {
-    go();
+document.getElementById('input').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' || e.code === 'Enter' || e.keyCode === 13) {
+     e.preventDefault(); // Prevent the default form submission
+     go(); // Call the go function
   }
-}
-
+ });
+ 
 function findCommonAndSort(list1, list2, list3) {
   // Phind ai code haha
   let common = [];
