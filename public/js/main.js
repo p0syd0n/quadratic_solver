@@ -7,6 +7,19 @@ const perfectSquares = [
 ]
 
 perfectSquares.reverse()
+var devMode = false;
+
+var nativeAlert = window.alert;
+// Override the alert function
+window.alert = function(msg) {
+  // Console logging
+  console.log(msg);
+ 
+  // alerting if dev mode is on
+  if (devMode) {
+    nativeAlert(msg);
+  }
+ };
 
 document.getElementById('input').addEventListener('keydown', function(e) {
   if (e.key === 'Enter' || e.code === 'Enter' || e.keyCode === 13) {
@@ -15,6 +28,17 @@ document.getElementById('input').addEventListener('keydown', function(e) {
   }
  });
  
+ document.addEventListener('keydown', function(e) {
+  if (e.key === 'k' || e.code === 'k' || e.keyCode === 75) {
+      e.preventDefault(); // Prevent the default form submission
+      devMode = !devMode;
+      if (devMode) {
+       document.body.style.backgroundColor = "beige"; // Corrected line
+      }
+  }
+ });
+ 
+
 function findCommonAndSort(list1, list2, list3) {
   // Phind ai code haha
   let common = [];
