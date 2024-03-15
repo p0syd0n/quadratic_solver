@@ -1,0 +1,27 @@
+<div class="fraction-container">
+  <span class="numerator">4&#177; <math><msqrt><mn>47</mn></msqrt></math></span>
+  <span class="denominator">4</span>
+ </div>
+
+
+ <style>
+  .fraction-container {
+ display: inline-block;
+ position: relative;
+ text-align: center;
+}
+
+.numerator, .denominator {
+ display: block;
+ padding: 0 5px; /* Adjust padding as needed */
+}
+
+.fraction-container::before {
+ content: "";
+ position: absolute;
+ top: 50%; /* Adjust position as needed */
+ left: 0;
+ width: 100%;
+ border-top: 2px solid black; /* Adjust border style as needed */
+}
+</style>
