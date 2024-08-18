@@ -1,19 +1,38 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Classes</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/css/main.css">
-    
+    <style>
+      /* Inline CSS to ensure footer is at the bottom */
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+      .container {
+        flex: 1;
+      }
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #f1f1f1;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
-       <p>Enter a, b, c separated by spaces. Example: ax<sup>2</sup> + bx + c = <strong>a b c</strong></p>
-       <!-- <input type="checkbox" id="devMode">Debug mode</input> -->
-       <input id="input" placeholder="a b c" autofocus></input>
-       <button id="go" onclick="go()">Go!</button>
-       <div id="results"></div>
+      <p>Enter a, b, c separated by spaces. Example: ax<sup>2</sup> + bx + c = <strong>a b c</strong></p>
+      <!-- <input type="checkbox" id="devMode">Debug mode</input> -->
+      <input id="input" placeholder="a b c" autofocus></input>
+      <button id="go" onclick="go()">Go!</button>
+      <div id="results"></div>
     </div>
+    <footer>v1.2.0 &copy Arthur Rusaikin 2024</footer>
     <script src="/js/main.js"></script>
-   </body>
-   
+  </body>
 </html>
