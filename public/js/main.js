@@ -171,12 +171,16 @@ function solve(a, b, c) {
     `
     return html;
   }
+  if (beforeSquareRoot == '') {
+    beforeSquareRoot = 1;
+  }
 
 
 
-  numeratorPositive = (-b + (beforeSquareRoot)*Math.sqrt(discriminant));
-  numeratorNegative = (-b - (beforeSquareRoot)*Math.sqrt(discriminant));
-  
+  numeratorPositive = (negativeB + (beforeSquareRoot)*Math.sqrt(discriminant));
+  numeratorNegative = (negativeB - (beforeSquareRoot)*Math.sqrt(discriminant));
+  alert(`Getting num positive and negative,, -b=${-b}, beforeSquareRoot=${beforeSquareRoot}, discriminant=${discriminant}`)
+  alert(numeratorPositive, numeratorNegative)
   const numbers = `${numeratorPositive/denominator} <br> ${numeratorNegative/denominator}`
   const fraction = `
   
